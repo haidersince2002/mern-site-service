@@ -10,7 +10,7 @@ import cors from "cors";
 
 //handling cors policy
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: `${import.meta.env.BACKEND_BASE_URL}`,
   methods: "GET, POST, PUT, PATCH, DELETE, HEAD",
   credentials: true,
 };
