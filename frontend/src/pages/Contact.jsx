@@ -38,13 +38,16 @@ const Contact = () => {
     console.log(userContact);
 
     try {
-      const response = await fetch(`http://localhost:8080/api/form/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userContact),
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BASEURL}/api/form/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userContact),
+        }
+      );
       console.log("response", response);
 
       if (response.ok) {

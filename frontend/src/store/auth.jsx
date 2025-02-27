@@ -23,12 +23,15 @@ export const AuthProvider = ({ children }) => {
   // user Authencation
   const userAuthentication = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/auth/user`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BASEURL}/api/auth/user`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -46,9 +49,12 @@ export const AuthProvider = ({ children }) => {
   //Get services data from backend/mongoDB
   const getServices = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/data/service`, {
-        method: "GET",
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BASEURL}/api/data/service`,
+        {
+          method: "GET",
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();

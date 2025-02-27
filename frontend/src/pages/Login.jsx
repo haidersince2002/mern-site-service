@@ -28,13 +28,16 @@ const Login = () => {
     e.preventDefault();
     console.log(user);
 
-    const response = await fetch(`http://localhost:8080/api/auth/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
+    const response = await fetch(
+      `${import.meta.env.VITE_BASEURL}/api/auth/login`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    );
 
     const res_data = await response.json();
 
