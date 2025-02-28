@@ -30,10 +30,6 @@ app.use("/api/data", serviceRoute);
 
 app.use(errorMiddleware);
 
-app.get("/", (req, res) => {
-  res.status(200).send("Hello");
-});
-
 connectDB().then(() => {
   app.listen(port, () => {
     console.log(`server is running on port http://localhost:${port}/api`);
