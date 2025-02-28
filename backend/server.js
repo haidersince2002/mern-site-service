@@ -8,18 +8,18 @@ import dotnev from "dotenv";
 import errorMiddleware from "./middlewares/error.middleware.js";
 import cors from "cors";
 
+dotnev.config({
+  path: "./.env",
+});
+
 //handling cors policy
 const corsOptions = {
-  origin: `${import.meta.env.BACKEND_BASE_URL}`,
+  origin: `${process.env.BACKEND_BASE_URL}`,
   methods: "GET, POST, PUT, PATCH, DELETE, HEAD",
   credentials: true,
 };
 
 app.use(cors(corsOptions));
-
-dotnev.config({
-  path: "./.env",
-});
 
 app.use(express.json());
 const port = process.env.PORT || 8000;
