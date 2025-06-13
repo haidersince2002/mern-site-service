@@ -25,7 +25,7 @@ export const home = async (req, res) => {
 
 export const register = async (req, res) => {
   try {
-    console.log(req.body);
+    // console.log(req.body);
     const { username, email, phone, password } = req.body;
 
     const userExist = await User.findOne({ email });
@@ -90,7 +90,7 @@ export const login = async (req, res) => {
 export const user = async (req, res) => {
   try {
     const userData = await req.user;
-    console.log(userData);
+    // console.log(userData);
     return res.status(200).json({ userData });
   } catch (error) {
     console.log(`Error from the user route ${error}`);
