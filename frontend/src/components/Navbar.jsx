@@ -1,28 +1,28 @@
 import { NavLink } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { useAuth } from "../store/auth";
 
 function Navbar() {
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
 
   const { isLoggedIn } = useAuth();
 
   // Load dark mode preference from localStorage on component mount
-  useEffect(() => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
-    setDarkMode(isDarkMode);
-  }, []);
+  // useEffect(() => {
+  //   const isDarkMode = localStorage.getItem("darkMode") === "true";
+  //   setDarkMode(isDarkMode);
+  // }, []);
 
   // Update localStorage and apply dark mode class to the document
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("darkMode", "true");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("darkMode", "false");
-    }
-  }, [darkMode]);
+  // useEffect(() => {
+  //   if (darkMode) {
+  //     document.documentElement.classList.add("dark");
+  //     localStorage.setItem("darkMode", "true");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //     localStorage.setItem("darkMode", "false");
+  //   }
+  // }, [darkMode]);
 
   return (
     <header className="bg-gray-900 shadow-lg fixed w-full top-0 z-50 dark:bg-gray-800">
@@ -36,9 +36,8 @@ function Navbar() {
             to="/"
             className="text-2xl font-bold text-white hover:text-gray-300 transition-colors dark:text-gray-200"
           >
-            Haider
+            ServiceX
           </NavLink>
-
           {/* Navigation Links */}
           <nav className="hidden md:flex space-x-8">
             <NavLink
@@ -109,14 +108,13 @@ function Navbar() {
               </>
             )}
           </nav>
-
-          {/* Dark Mode Toggle Button */}
+          {/* Dark Mode Toggle Button
           <button
             onClick={() => setDarkMode(!darkMode)}
             className="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors dark:bg-gray-600 dark:hover:bg-gray-500 md:ml-4"
           >
             {darkMode ? "Light Mode" : "Dark Mode"}
-          </button>
+          </button> */}
         </div>
       </div>
     </header>

@@ -11,15 +11,15 @@ const Home = () => {
             {/* Hero Content */}
             <div className="hero-content text-center md:text-left">
               <p className="text-blue-500 font-semibold text-lg mb-2">
-                We are the World's Best IT Company
+                We are the World&apos;s Best IT Company
               </p>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
-                Welcome to Thapa Technical
+                Welcome to ServiceX
               </h1>
               <p className="text-gray-700 dark:text-gray-300 mb-6">
                 Are you ready to take your business to the next level with
-                cutting-edge IT solutions? Look no further! At Thapa Technical,
-                we specialize in providing innovative IT services and solutions
+                cutting-edge IT solutions? Look no further! At ServiceX, we
+                specialize in providing innovative IT services and solutions
                 tailored to meet your unique needs.
               </p>
               <div className="btn btn-group flex justify-center md:justify-start space-x-4">
@@ -72,7 +72,7 @@ const Home = () => {
             <p className="text-gray-700 dark:text-gray-300 mb-6">
               Ready to take the first step towards a more efficient and secure
               IT infrastructure? Contact us today for a free consultation and
-              let's discuss how Thapa Technical can help your business thrive in
+              let&apos;s discuss how ServiceX can help your business thrive in
               the digital age.
             </p>
             <div className="btn btn-group flex justify-center md:justify-start space-x-4">

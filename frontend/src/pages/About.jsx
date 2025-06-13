@@ -14,7 +14,7 @@ export const About = () => {
             {/* Hero Content */}
             <div className="hero-content text-center md:text-left">
               <p className="text-l mt-5 font-bold text-gray-800 dark:text-white mb-4">
-                {user ? `Hi, ${user.username}` : `Welcome, to Haider Technical`}
+                {user ? `Hi, ${user.username}` : `Welcome, to ServiceX`}
               </p>
               <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
                 Why Choose Us?
@@ -26,7 +26,7 @@ export const About = () => {
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 Customization: We understand that every business is unique.
-                That's why we create solutions that are tailored to your
+                That&apos;s why we create solutions that are tailored to your
                 specific needs and goals.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -38,9 +38,9 @@ export const About = () => {
                 on the quality of our services.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-6">
-                Reliability: Count on us to be there when you need us. We're
-                committed to ensuring your IT environment is reliable and
-                available 24/7.
+                Reliability: Count on us to be there when you need us.
+                We&apos;re committed to ensuring your IT environment is reliable
+                and available 24/7.
               </p>
               <div className="btn btn-group flex justify-center md:justify-start space-x-4">
                 <NavLink to="/contact">

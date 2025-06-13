@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth.jsx";
 import { toast } from "react-toastify";
@@ -52,7 +52,7 @@ const Login = () => {
       });
       navigate("/");
       toast.success("Login Succesful");
-      toast.info(`Welcome to Haider Technical`);
+      toast.info(`Welcome to ServiceX`);
     } else {
       toast.error(
         res_data.extraDetailes ? res_data.extraDetails : res_data.message
